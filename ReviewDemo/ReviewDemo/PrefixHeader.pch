@@ -1,0 +1,242 @@
+//
+//  PrefixHeader.pch
+//  ReviewDemo
+//
+//  Created by jiong23 on 16/3/18.
+//  Copyright © 2016年 Chenjz. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+
+#endif /* PrefixHeader_pch */
+
+#ifdef DEBUG
+#define KECLog(...) NSLog(@" %@\n\n",[NSString stringWithFormat:__VA_ARGS__])
+#else
+#define KECLog(...)
+#endif
+
+#define RGB(r, g, b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
+
+#import "UIView+Extension.h"
+#import "UIBarButtonItem+Extension.h"
+#import "UIImageView+Extension.h"
+#import "NSDate+Extension.h"
+#import "NSDateFormatter+Extension.h"
+#import "UIImage+Extension.h"
+#import "NSString+Extension.h"
+
+#import "MJExtension.h"
+#import "MJRefresh.h"
+#import "Masonry.h"
+
+#import "KECDataManager.h"
+#import "KECLoadingView.h"
+#import "Statistics.h"
+#import "KECHubView.h"
+
+//设备宽高
+#define MAIN_SCREEN [UIScreen mainScreen]
+#define APP_WIDTH   [UIScreen mainScreen].bounds.size.width
+#define APP_HEIGHT  [UIScreen mainScreen].bounds.size.height
+
+//APP主颜色
+#define MainColor RGB(0, 191, 255) //RGB((63), (182), (243))//RGB((91), (149), (230))
+#define blue_65  RGB(49, 117, 135)
+#define black_80  RGB(71, 68, 68)
+#define black_70  RGB(95, 94, 94)
+#define black_60  RGB(118, 118, 118)
+#define black_50  RGB(142, 143, 143)
+#define red_100  RGB(200, 0, 16)
+#define orange_100  RGB(238, 133, 9)
+#define orange_light  RGB(244, 168, 33)
+
+//TableView颜色
+#define TableViewBackgroundColor RGB((238), (238), (244))
+#define TableViewColor [UIColor whiteColor]
+
+
+//用户名
+#define USER_NAME @"USER_NAME"
+//密码
+#define USER_PASSWORD @"USER_PASSWORD"
+//UID
+#define USER_ID @"USER_ID"
+//用户城市
+#define USER_CITY @"USER_CITY"
+//Token
+#define USER_TOKEN @"USER_TOKEN"
+//Host
+#define HOST_NAME @"HOST_NAME"
+//用户头像
+#define USER_IMAGE @"USER_IMAGE"
+//用户身份
+#define ROLE_ID @"ROLE_ID"
+//首次登陆
+#define LOGIN_FIRST_PER_DAY @"LOGIN_FIRST_PER_DAY"
+//随便逛逛
+#define WALKING_USER @"WALKING_USER"
+//网络状态
+#define NETWORK_STATUS @"NETWORK_STATUS"
+//是否登录
+#define IS_ONLINE @"IS_ONLINE"
+//手势
+#define GESTURE_LOCK @"GESTURE_LOCK"
+//城市名
+#define CITY_NAME @"CITY_NAME"
+//经纬度
+#define LOCAL_LATITUDE  @"LOCAL_LATITUDE"
+#define LOCAL_LONGTITUDE @"LOCAL_LONGTITUDE"
+
+
+//分销商user_id
+#define RESELLER_USER_ID  @"RESELLER_USER_ID"
+//分销商的幼儿园名称
+#define RESELLER_KINDERGARTEM @"RESELLER_KINDERGARTEM"
+//分销商的上级id (邀请码)
+#define RESELLER_TOP_ID @"RESELLER_TOP_ID"
+
+//点击进入商城
+#define CLICK_SHOPPINGMALL @"click_shoppingMall"
+
+//点击首页广告页面
+#define HOME_PAGE_BANNER @"click_homePageBanner"
+
+//点击进入发现页面
+#define CLICK_DISCOVER_PAGE @"click_discoverPage"
+
+//点击进入我的相册
+#define CLICK_PHOTO_LIST @"click_photo_list"
+
+//点击进入我的积分
+#define CLICK_MYMONEY @"click_mymoney"
+
+//点击进入积分商城
+#define CLICK_MYMONEY_SHOP @"click_mymoneyshop"
+
+//点击进入发现页面广告
+#define CLICK_DISCOVER_BANNER @"click_discoverBanner"
+
+//点击进入新帖模块
+#define CLICK_NEWPOST @"click_newpost"
+
+//点击进入新帖详情页面
+#define CLICK_NEWPOST_DETAIL @"click_newpost_detail"
+
+//点击进入热帖模块
+#define CLICK_HOSTPOST @"click_hostpost"
+
+//点击进入热帖详情页面
+#define CLICK_HOSTPOST_DETAIL @"click_hostpost_detail"
+
+//点击进入话题模块
+#define CLICK_TALKINGCIRCLE @"click_talkingcircle"
+
+////点击进入话题详情页面
+//#define CLICK_TALKINGCIRCLE_DETAIL @"click_talkingcircle_detail"
+
+//点击进入论坛栏目
+#define CLICK_FORUM @"click_forum"
+
+//点击进入论坛栏目详情页面
+#define CLICK_FORUM_DETAIL @"click_forum_detail"
+
+//点击进入消息页面
+#define CLICK_MESSEGE_PAGE @"click_messege_page"
+
+//分享帖子
+#define CLICK_SHARE_BUTTON @"click_share"
+
+//赞帖子
+#define CLICK_LIKE_BUTTON @"click_like"
+
+//回复帖子
+#define CLICK_REPLAY_BUTTON @"click_replay"
+
+//帖子详情点击举报按钮
+#define CLICK_WARNNING_BUTTON @"click_warnning"
+
+//帖子详情点赞按钮
+#define CLICK_LIKE_DETAIL @"click_like_detail"
+
+//帖子详情页面回复按钮
+#define CLICK_REPLAY_DETAIL @"click_replay_detail"
+
+//点击进入我的界面
+#define CLICK_ME_PAGE @"click_me_page"
+
+//点击进入发现页面机构按钮
+#define CLICK_DISCOVER_OGER @"click_discover_oger"
+
+//点击进入发现页面机构详情
+#define CLICK_DISCOVER_OGER_DETAIL @"click_discover_oger_detail"
+
+//点击进入发现页面机构分类栏
+#define CLICK_DISCOVER_OGER_CATE @"click_discover_oger_cate"
+
+//点击进入发现页面课程按钮
+#define CLICK_DISCOVER_COURES @"click_discover_coures"
+
+//点击进入发现页面课程详情
+#define CLICK_DISCOVER_COURES_DETAIL @"click_discover_coures_detail"
+
+//点击进入发现页面课程分类栏
+#define CLICK_DISCOVER_COURES_CATE @"click_discover_coures_cate"
+
+//点击进入发现页面老师按钮
+#define CLICK_DISCOVER_TEACHER @"click_discover_teacher"
+
+//点击进入发现页面老师详情
+#define CLICK_DISCOVER_TEACHER_DETAIL @"click_discover_teacher_detail"
+
+//点击进入发现页面老师分类栏
+#define CLICK_DISCOVER_TEACHER_CATE @"click_discover_teacher_cate"
+
+//点击进入发现页面家长
+#define CLICK_DISCOVER_PRENDS @"click_discover_prends"
+
+//点击进入发现页面家长详情
+#define CLICK_DISCOVER_PRENDS_DETAIL @"click_discover_prends_detail"
+
+//点击进入发现页面家长分类栏
+#define CLICK_DISCOVER_PRENDS_CATE @"click_discover_prends_cate"
+
+//点击进入摇一摇
+#define CLICK_SHAKETREE @"click_shakeTree"
+
+//点击进入任务奖励
+#define CLICK_TASKREWORD @"click_taskReword"
+
+//点击进入积分兑换
+#define CLICK_TASKREWORD_EXCHANGE @"click_taskReword_exchange"
+
+//积分成功兑换
+#define CLICK_TASKREWORD_SECESS @"click_taskReword_secess"
+
+//点击邀请好友按钮
+#define CLICK_INVITE_FRIENDS @"click_invite_friends"
+
+//点击帖子详情页分享按钮
+#define CLICK_SHARE_DETAIL @"click_share_detail"
+
+//点击首页话题我专注的栏目
+#define CLICK_MYLIKE_BUTTON @"click_mylike_button"
+
+//点击首页话题我发起的栏目
+#define CLICK_MYPOST_BUTTON @"click_mypost_button"
+
+//点击首页话题热门话题栏目
+#define CLICK_HOTPOST_BUTTON @"click_hotpost_button"
+
+//点击自动注册游客账号
+#define CLICK_REG_TOURIST @"click_reg_tourist"
+
+//点击自动注册游客账号
+#define CLICK_REG_USER @"click_reg_user"
+
